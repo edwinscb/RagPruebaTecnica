@@ -1,0 +1,22 @@
+# Framework para construir RAG y conectar con LLMs
+langchain
+langchain-community
+
+# API de OpenAI para usar modelos GPT
+openai
+
+# Base de datos de embeddings para búsqueda semántica
+chromadb
+faiss-cpu
+
+# Interfaz web para la demo
+streamlit
+
+# Procesamiento y extracción de texto desde PDFs
+pymupdf
+
+# Almacenamiento en Google Cloud Firestore (BD NoSQL)
+google-cloud-firestore
+
+# Almacenamiento de PDFs en Google Cloud Storage
+google-cloud-storage
