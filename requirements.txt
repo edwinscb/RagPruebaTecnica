@@ -25,3 +25,7 @@ google-cloud-firestore
 google-cloud-storage
 
 numpy
+
+langdetect
+
+deep_translator

@@ -2,14 +2,23 @@ import fitz  # PyMuPDF
 import os
 from database import create_db, insert_document
 from chunker import split_text_into_chunks
+from langdetect import detect
+from deep_translator import GoogleTranslator
 
 def extract_text_from_pdf(pdf_path):
-    """Extrae el texto de un PDF y lo retorna como string."""
+    """Extrae el texto de un PDF y lo retorna sin traducir."""
     text = ""
     with fitz.open(pdf_path) as doc:
         for i, page in enumerate(doc, 1):
             text += f"\n--- Página {i} ---\n{page.get_text('text')}\n"
+
     return text.strip()
+
+def translate_chunk(chunk):
+    """Traduce un fragmento de texto si está en inglés."""
+    if detect(chunk) == "en":
+        return GoogleTranslator(source="en", target="es").translate(chunk)
+    return chunk
 
 if __name__ == "__main__":
     create_db()  # Crea la base de datos si no existe
@@ -23,7 +32,8 @@ if __name__ == "__main__":
             chunks = split_text_into_chunks(extracted_text)
 
             for i, chunk in enumerate(chunks):
+                translated_chunk = translate_chunk(chunk)  # Traducción después del corte
                 chunk_name = f"{filename}_chunk_{i}"
-                insert_document(chunk_name, chunk)
+                insert_document(chunk_name, translated_chunk)
 
             print(f"{len(chunks)} fragmentos almacenados para {filename}")
