@@ -5,6 +5,9 @@ langchain-community
 # API de OpenAI para usar modelos GPT
 openai
 
+# Generación de embeddings con modelos pre-entrenados
+sentence-transformers
+
 # Base de datos de embeddings para búsqueda semántica
 chromadb
 faiss-cpu

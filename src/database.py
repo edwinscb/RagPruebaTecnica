@@ -17,7 +17,7 @@ def create_db():
     conn.close()
 
 def insert_document(nombre_archivo, contenido_texto):
-    """Inserta un documento en la base de datos."""
+    """Inserta un fragmento de texto en la base de datos."""
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     try:
@@ -25,7 +25,7 @@ def insert_document(nombre_archivo, contenido_texto):
                        (nombre_archivo, contenido_texto))
         conn.commit()
     except sqlite3.IntegrityError:
-        print(f"El archivo {nombre_archivo} ya está en la base de datos.")
+        print(f"El fragmento {nombre_archivo} ya está en la base de datos.")
     conn.close()
 
 def get_documents():
