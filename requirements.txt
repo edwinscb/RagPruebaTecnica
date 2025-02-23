@@ -23,3 +23,5 @@ google-cloud-firestore
 
 # Almacenamiento de PDFs en Google Cloud Storage
 google-cloud-storage
+
+numpy
