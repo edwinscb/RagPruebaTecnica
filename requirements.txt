@@ -4,7 +4,7 @@ langchain-community
 
 # API de OpenAI para usar modelos GPT
 openai
-
+ollama
 # Generación de embeddings con modelos pre-entrenados
 sentence-transformers
 
