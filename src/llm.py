@@ -3,7 +3,7 @@ from search import search
 
 def generate_response(query):
     """Genera una respuesta basada en los fragmentos recuperados."""
-    results = search(query, top_k=5)  # Buscar en la base de datos
+    results = search(query, top_k=3)  # Buscar en la base de datos
 
     if not results:  # Verificar si `results` es None o vacío
         return "No se encontraron documentos relevantes para la consulta."

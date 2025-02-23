@@ -19,3 +19,5 @@ numpy
 
 flask 
 flask-cors
+
+streamlit
