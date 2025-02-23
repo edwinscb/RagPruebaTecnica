@@ -3,12 +3,9 @@ langchain
 langchain-community
 
 # 📌 Modelos de lenguaje y embeddings
-openai
+
 ollama
 sentence-transformers
-
-# 📌 Base de datos SQLite para almacenamiento
-sqlite3  # (No necesitas instalarlo, viene con Python)
 
 # 📌 Procesamiento de PDFs y extracción de texto
 pymupdf
@@ -19,3 +16,6 @@ deep_translator
 
 # 📌 Otras dependencias esenciales
 numpy
+
+flask 
+flask-cors
