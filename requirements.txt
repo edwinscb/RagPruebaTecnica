@@ -1,31 +1,21 @@
-# Framework para construir RAG y conectar con LLMs
+# 📌 Framework para construir RAG y conectar con LLMs
 langchain
 langchain-community
 
-# API de OpenAI para usar modelos GPT
+# 📌 Modelos de lenguaje y embeddings
 openai
 ollama
-# Generación de embeddings con modelos pre-entrenados
 sentence-transformers
 
-# Base de datos de embeddings para búsqueda semántica
-chromadb
-faiss-cpu
+# 📌 Base de datos SQLite para almacenamiento
+sqlite3  # (No necesitas instalarlo, viene con Python)
 
-# Interfaz web para la demo
-streamlit
-
-# Procesamiento y extracción de texto desde PDFs
+# 📌 Procesamiento de PDFs y extracción de texto
 pymupdf
 
-# Almacenamiento en Google Cloud Firestore (BD NoSQL)
-google-cloud-firestore
-
-# Almacenamiento de PDFs en Google Cloud Storage
-google-cloud-storage
-
-numpy
-
+# 📌 Detección de idioma y traducción automática
 langdetect
-
 deep_translator
+
+# 📌 Otras dependencias esenciales
+numpy
