@@ -1,5 +1,5 @@
 import ollama
-from search import search
+from backend.services.search import search
 
 def generate_response(query):
     """Genera una respuesta basada en los fragmentos recuperados."""

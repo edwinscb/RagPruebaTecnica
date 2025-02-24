@@ -1,6 +1,8 @@
 Flask
-Flask-Cors
 sentence-transformers
 numpy
-sqlite3
 ollama
+PyMuPDF
+langdetect
+deep_translator
+langchain

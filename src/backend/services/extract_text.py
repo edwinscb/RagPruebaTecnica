@@ -1,6 +1,8 @@
 import fitz  # PyMuPDF
 import os
-from database import create_db, insert_document
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from backend.db.database import create_db, insert_document
 from chunker import split_text_into_chunks
 from langdetect import detect
 from deep_translator import GoogleTranslator

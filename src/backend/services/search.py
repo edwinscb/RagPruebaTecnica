@@ -1,6 +1,9 @@
 import numpy as np
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from sentence_transformers import SentenceTransformer
-from database import search_similar_documents
+from backend.db.database import search_similar_documents
 
 # Cargar el modelo de embeddings
 model = SentenceTransformer("all-MiniLM-L6-v2")
