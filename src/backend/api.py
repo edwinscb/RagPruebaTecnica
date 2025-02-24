@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from backend.services.llm import generate_response
+from services.llm import generate_response
 
 app = Flask(__name__)
 

@@ -3,12 +3,12 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from sentence_transformers import SentenceTransformer
-from backend.db.database import search_similar_documents
+from db.database import search_similar_documents
 
 # Cargar el modelo de embeddings
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-def search(query, top_k=3):
+def search(query, top_k=4):
     """Busca los fragmentos más relevantes a una consulta en español."""
     try:
         query_embedding = model.encode(query)  # Convertir consulta en embedding

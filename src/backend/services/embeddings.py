@@ -3,7 +3,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from sentence_transformers import SentenceTransformer
-from backend.db.database import get_documents, insert_embedding
+from db.database import get_documents, insert_embedding
 
 # Cargar el modelo de embeddings
 model = SentenceTransformer("all-MiniLM-L6-v2")

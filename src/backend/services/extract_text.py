@@ -2,7 +2,7 @@ import fitz  # PyMuPDF
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from backend.db.database import create_db, insert_document
+from db.database import create_db, insert_document
 from chunker import split_text_into_chunks
 from langdetect import detect
 from deep_translator import GoogleTranslator
@@ -24,8 +24,8 @@ def translate_chunk(chunk):
 
 if __name__ == "__main__":
     create_db()  # Crea la base de datos si no existe
-
-    pdf_folder = "data"
+    print("Base de   datos creada.")
+    pdf_folder = os.path.join(os.path.dirname(__file__), "../data")
     for filename in os.listdir(pdf_folder):
         if filename.endswith(".pdf"):
             pdf_path = os.path.join(pdf_folder, filename)

@@ -1,5 +1,5 @@
 import ollama
-from backend.services.search import search
+from services.search import search
 
 def generate_response(query):
     """Genera una respuesta basada en los fragmentos recuperados."""
@@ -19,6 +19,7 @@ def generate_response(query):
     Respuesta en español:
     """
 
-    response = ollama.chat(model="llama3.2:3b", messages=[{"role": "user", "content": prompt}])
+    response = ollama.chat(model="llama3:3b", messages=[{"role": "user", "content": prompt}])
+
     return response['message']['content'],chunks
 

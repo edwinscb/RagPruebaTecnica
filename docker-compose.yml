@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: ./src/backend
+    ports:
+      - "5000:5000"
+    working_dir: /app
+    command: sh -c "ls -l services && python services/extract_text.py && python services/embeddings.py && python api.py"
+
+  frontend:
+    build: ./src/frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend

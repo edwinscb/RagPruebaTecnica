@@ -2,7 +2,9 @@ import sqlite3
 import numpy as np
 from sentence_transformers.util import cos_sim
 
-DB_PATH = "data/extracted_text.db"
+import os
+DB_PATH = os.path.join(os.path.dirname(__file__), "../data/extracted_text.db")
+
 
 def create_db():
     """Crea la base de datos y las tablas si no existen."""
