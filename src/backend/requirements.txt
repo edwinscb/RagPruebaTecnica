@@ -1,0 +1,6 @@
+Flask
+Flask-Cors
+sentence-transformers
+numpy
+sqlite3
+ollama

@@ -1,0 +1,36 @@
+# ❌ Ignorar el entorno virtual
+venv/
+.env
+*.env
+
+# ❌ Archivos de caché y compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ❌ Base de datos SQLite (si no quieres subirla)
+data/extracted_text.db
+
+# ❌ Logs y archivos temporales
+*.log
+*.tmp
+*.swp
+*.swo
+.DS_Store
+
+# ❌ Archivos de configuración de VSCode, PyCharm, y otros editores
+.vscode/
+.idea/
+*.iml
+
+# ❌ Evitar subir dependencias instaladas en Docker
+backend/__pycache__/
+frontend/__pycache__/
+backend/.pytest_cache/
+frontend/.pytest_cache/
+backend/.mypy_cache/
+frontend/.mypy_cache/
+
+# ❌ Evitar imágenes de Docker
+docker-compose
